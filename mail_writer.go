@@ -52,7 +52,7 @@ func (m *MailWriter) WriteEntry(entry *log.Entry) (n int, err error) {
 	return
 }
 
-type mailConfig struct {
+type MailConfig struct {
 	Host     string
 	Port     int
 	UserName string
@@ -62,7 +62,7 @@ type mailConfig struct {
 	To       []string
 }
 
-func NewFileMailLogger(logFile string, mailCfg mailConfig) log.Logger {
+func NewFileMailLogger(logFile string, mailCfg MailConfig) log.Logger {
 	return log.Logger{
 		Caller: 1,
 		Writer: &log.MultiEntryWriter{&log.FileWriter{

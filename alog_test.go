@@ -3,7 +3,7 @@ package alog
 import "testing"
 
 func _TestFileMailLogger(t *testing.T) {
-	log := NewFileMailLogger("test.log", mailConfig{
+	log := NewFileMailLogger("test.log", MailConfig{
 		Host:     "smtp.126.com",
 		Port:     465,
 		UserName: "w1013d27@126.com",
